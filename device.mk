@@ -410,6 +410,17 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+# Recovery
+TOUCHSCREEN_FW_PATH := vendor/xiaomi/fog/proprietary/vendor/firmware
+
+PRODUCT_COPY_FILES += \
+    $(TOUCHSCREEN_FW_PATH)/Conf_MultipleTest.ini:recovery/root/vendor/firmware/Conf_MultipleTest.ini \
+    $(TOUCHSCREEN_FW_PATH)/focaltech_ts_fw_xinli.bin:recovery/root/vendor/firmware/focaltech_ts_fw_xinli.bin \
+    $(TOUCHSCREEN_FW_PATH)/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin \
+    $(TOUCHSCREEN_FW_PATH)/novatek_ts_hlt_fw.bin:recovery/root/vendor/firmware/novatek_ts_hlt_fw.bin \
+    $(TOUCHSCREEN_FW_PATH)/novatek_ts_hlt_mp.bin:recovery/root/vendor/firmware/novatek_ts_hlt_mp.bin \
+    $(TOUCHSCREEN_FW_PATH)/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
