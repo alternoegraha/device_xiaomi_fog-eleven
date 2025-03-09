@@ -106,6 +106,17 @@
     -->
      <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
 
+     <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
+         Note that while rounded.xml includes the entire path (including the horizontal and vertical
+         corner edges), this pulls out just the curve.
+     -->
+    <string name="config_rounded_mask" translatable="false">
+        m0,68v0C0,10.36 40.721,0 68,0H0Z
+    </string>
+
+    <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
+    <dimen name="config_rounded_mask_size">68px</dimen>
+
     <!-- Is the device capable of hot swapping an ICC Card -->
      <bool name="config_hotswapCapable">true</bool>
 
