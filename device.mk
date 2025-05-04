@@ -150,6 +150,8 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Display
+TARGET_SCREEN_DENSITY := 320
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1 \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
