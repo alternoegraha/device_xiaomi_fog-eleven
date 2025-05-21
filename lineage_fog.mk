@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit GMS if available
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 -include vendor/extra/product.mk
