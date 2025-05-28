@@ -35,7 +35,7 @@
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
     <!-- Burn in protection -->
-    <bool name="config_statusBarBurnInProtection">true</bool>
+    <bool name="config_statusBarBurnInProtection">false</bool>
 
     <!-- Respect drawable/rounded.xml intrinsic size for multiple radius corner path customization -->
     <bool name="config_roundedCornerMultipleRadius">true</bool>
