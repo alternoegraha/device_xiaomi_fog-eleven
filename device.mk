@@ -373,6 +373,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
+    NoCutoutOverlay \
     NotchBarKiller \
     TetheringOverlay \
     WifiResCommon 
