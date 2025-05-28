@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "PowerProfileOverlayIN2",
+    manifest: "AndroidManifest.xml",
+    vendor: true,
+}

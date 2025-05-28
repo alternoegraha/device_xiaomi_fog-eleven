@@ -1,0 +1,23 @@
+runtime_resource_overlay {
+    name: "PowerProfileOverlay",
+    manifest: "AndroidManifest.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "PowerProfileOverlayIndia",
+    manifest: "AndroidManifestC3QB.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "PowerProfileOverlayRain",
+    manifest: "AndroidManifestC3QN.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "PowerProfileOverlayWind",
+    manifest: "AndroidManifestC3QL.xml",
+    vendor: true,
+}

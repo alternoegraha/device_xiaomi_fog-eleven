@@ -375,6 +375,11 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     NoCutoutOverlay \
     NotchBarKiller \
+    PowerProfileOverlay \
+    PowerProfileOverlayIndia \
+    PowerProfileOverlayIN2 \
+    PowerProfileOverlayRain \
+    PowerProfileOverlayWind \
     TetheringOverlay \
     WifiResCommon 
 
