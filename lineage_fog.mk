@@ -13,6 +13,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
+-include vendor/extra/product.mk
 
 PRODUCT_NAME := lineage_fog
 PRODUCT_DEVICE := fog
