@@ -46,11 +46,6 @@ PRODUCT_PACKAGES += \
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-# ART Debugging (Disable)
-USE_DEX2OAT_DEBUG := false
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -155,10 +150,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
 # Display
 TARGET_SCREEN_DENSITY := 280
 
@@ -243,10 +234,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -285,7 +272,6 @@ PRODUCT_COPY_FILES += \
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# Kernel
 LOCAL_KERNEL := device/xiaomi/fog-kernel/Image
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel
@@ -427,13 +413,9 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.mdm.sh \
     init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.dcvs.sh
+    init.qcom.usb.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -475,16 +457,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/xiaomi \
     hardware/qcom-caf/bootctrl
-
-# Speed profile services and wifi-service to reduce RAM and storage
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-WITH_DEXPREOPT_DEBUG_INFO := false
-DONT_DEXPREOPT_PREBUILTS := true
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
-    SystemUI
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -539,7 +511,7 @@ endif
 PRODUCT_PACKAGES += \
     vndservicemanager
 
-# Verify boot
+# Verified boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
@@ -550,7 +522,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
 
 # Vulkan
 PRODUCT_PACKAGES += \

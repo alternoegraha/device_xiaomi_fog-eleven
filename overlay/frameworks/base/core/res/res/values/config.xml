@@ -99,7 +99,7 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -40 V 49 H 40 V 0 H 0 Z</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -64 V 56 H 64 V 0 H 0 Z</string>
 
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
@@ -551,34 +551,34 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
+        <item>27</item>
+        <item>55</item>
+        <item>71</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>10</item>
-        <item>20</item>
-        <item>30</item>
+        <item>27</item>
+        <item>55</item>
+        <item>71</item>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>40</item>
+        <item>71</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback when selecting an hour/minute tick of a Clock -->
     <integer-array name="config_clockTickVibePattern">
-        <item>125</item>
-        <item>30</item>
+        <item>126</item>
+        <item>57</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback when selecting a day/month/year date of a Calendar -->
     <integer-array name="config_calendarDateVibePattern">
-        <item>125</item>
-        <item>30</item>
+        <item>126</item>
+        <item>57</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about booting with safe mode enabled -->
@@ -589,14 +589,6 @@
         <item>21</item>
         <item>500</item>
         <item>600</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
-    <integer-array name="config_scrollBarrierVibePattern">
-        <item>0</item>
-        <item>15</item>
-        <item>10</item>
-        <item>10</item>
     </integer-array>
 
     <!-- Default list of files pinned by the Pinner Service -->
@@ -747,7 +739,10 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
-    <!-- The max scale for the wallpaper when it's zoomed in -->
-    <item name="config_wallpaperMaxScale" format="float" type="dimen">1</item>
+    <!-- Device configuration indicating whether we should avoid using accelerated graphics
+         in certain places to reduce RAM footprint. Allows to tune down 
+         device's memory use without going to the point of causing applications to turn
+         off features. -->
+    <bool name="config_avoidGfxAccel">false</bool>
 
 </resources>

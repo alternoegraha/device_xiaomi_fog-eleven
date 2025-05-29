@@ -141,17 +141,6 @@ persist.vendor.quick.charge=1
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# Dalvik
-dalvik.vm.systemuicompilerfilter=speed
-
-# Dex2oat
-dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
-dalvik.vm.boot-dex2oat-threads=8
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
-dalvik.vm.dex2oat-threads=8
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
-dalvik.vm.image-dex2oat-threads=8
-
 # Display
 vendor.display.camera_noc_efficiency_factor=0.70
 vendor.display.comp_mask=0
@@ -193,17 +182,17 @@ drm.service.enabled=true
 # DPM
 persist.vendor.dpmhalservice.enable=1
 
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # Graphics
 debug.egl.hw=0
+debug.hwui.renderer=skiagl
 debug.mdpcomp.logs=0
+debug.renderengine.backend=skiaglthreaded
 debug.sdm.support_writeback=0
 debug.sf.disable_backpressure=1
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=1
+renderthread.skia.reduceopstasksplitting=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -306,11 +295,6 @@ ro.telephony.iwlan_operation_mode=legacy
 # SoC
 ro.soc.manufacturer=QTI
 ro.soc.model=SM6225
-
-# SkiaGL Threaded
-debug.renderengine.backend=skiaglthreaded
-#debug.hwui.renderer=opengl
-renderthread.skia.reduceopstasksplitting=true
 
 # Zygote
 zygote.critical_window.minute=10
